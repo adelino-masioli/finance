@@ -4,7 +4,7 @@ Micro Sistema Financeiro desenvolvido em PHP - HotMilhas
 
 ### Instalação
 
-Para instalar o aplicativo, basta serguir os passo abaixo
+Para instalar o aplicativo, basta seguir os passos abaixo
 
 Requistos
 
@@ -14,7 +14,7 @@ Composer
 MySQL
 ```
 
-Após o download em um diretório na máquina local, acessar o projeto e seguir os passo abaixo.
+Após o download em um diretório na máquina local, acessar o projeto e seguir os passos seguinte.
 
 ```
 cd /financas
