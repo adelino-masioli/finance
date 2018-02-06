@@ -1,6 +1,6 @@
 # Sistema Financeiro
 
-Micro Sistema Financeiro desenvolvido em PHP
+Micro Sistema Financeiro desenvolvido em PHP - HotMilhas
 
 ### Instalação
 
@@ -18,8 +18,9 @@ Após o download em um diretório na máquina local, acessar o projeto e seguir 
 
 ```
 cd /financas
-copiar o arquivo .env.example e alterar as credenciais do banco de dados
+copiar o arquivo .env.example para .env e alterar as credenciais do banco de dados
 composer install
+php migrate-seed.php ou rodar o finance_hotmilhas.sql de exemplo que está na raiz do projeto
 php -S 127.0.0.1:8000 -t public public/index.php
 ```
 

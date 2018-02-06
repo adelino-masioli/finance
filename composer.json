@@ -14,7 +14,8 @@
         "twig/twig": "~1.0",
         "illuminate/database": "5.4.13",
         "jasny/auth": "1.0.1",
-        "vlucas/phpdotenv": "2.4"
+        "vlucas/phpdotenv": "2.4",
+        "phpunit/phpunit": "3.7.*"
     },
     "autoload": {
         "psr-4": {
