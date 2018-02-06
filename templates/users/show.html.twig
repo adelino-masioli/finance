@@ -21,10 +21,12 @@
                                class="btn btn-primary">
                                 <span class="glyphicon glyphicon-pencil"></span> Editar
                             </a>
-                            <a href="{{ route('users.delete',{'id': user.id}) }}"
-                               class="btn btn-danger hidden">
-                                <span class="glyphicon glyphicon-remove"></span> Excluir
-                            </a>
+                            {% if(Auth.user().id == 1) %}
+                                <a href="{{ route('users.delete',{'id': user.id}) }}"
+                                   class="btn btn-danger">
+                                    <span class="glyphicon glyphicon-remove"></span> Excluir
+                                </a>
+                            {%  endif %}
                         </div>
                     </div>
                     <br/>

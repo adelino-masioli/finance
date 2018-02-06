@@ -37,7 +37,9 @@
                         </ul>
                     </li>
                     <li><a href="{{ route('statements.list') }}">Extrato</a></li>
-                    <li><a href="{{ route('users.list') }}">Usuário</a></li>
+                    {% if(Auth.user().id == 1) %}
+                        <li><a href="{{ route('users.list') }}">Usuário</a></li>
+                    {%  endif %}
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
