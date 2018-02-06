@@ -1,0 +1,40 @@
+<div class="row">
+    <form method="post" action="{{ action }}">
+        <div class="form-group col-md-12">
+            <label class="control-label">Data prevista</label>
+            <input class="form-control date-format" type="text" placeholder="DD/MM/YYYY"
+                   name="date_launch" value="{{ receive.date_launch | date('d/m/Y') }}" required>
+        </div>
+        <div class="form-group col-md-12">
+            <label class="control-label">Descrição</label>
+            <input class="form-control" type="text" placeholder="Descrição"
+                   name="name" value="{{ receive.name }}" required>
+        </div>
+        <div class="form-group col-md-12">
+            <label class="control-label">Valor</label>
+            <input class="form-control money" type="text" placeholder="0.000,00"
+                   name="value" value="{{ receive.value ? receive.value | number_format(2,',','.') : ''}}" required>
+        </div>
+        <div class="form-group col-md-12">
+            <label class="control-label">Status</label>
+            <select class="form-control" name="status" required>
+                <option value="1" {{ receive.status is not null and receive.status == 1?'selected="selected"':'' }}>Aberto</option>
+                <option value="2" {{ receive.status is not null and receive.status == 2?'selected="selected"':'' }}>Fechado</option>
+            </select>
+        </div>
+
+        <div class="col-md-12">
+            <hr/>
+        </div>
+        <div class="form-group col-md-2">
+            <a href="{{ route('receives.list') }}" class="btn btn-default btn-block">
+                <span class="glyphicon glyphicon-backward"></span> Cancelar
+            </a>
+        </div>
+        <div class="form-group col-md-2">
+            <button type="submit" class="btn btn-danger btn-block">
+                <span class="glyphicon glyphicon-{{ submitIcon }}"></span> Salvar
+            </button>
+        </div>
+    </form>
+</div>

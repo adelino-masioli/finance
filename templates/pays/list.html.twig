@@ -1,0 +1,64 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <span class="glyphicon glyphicon-th-large"></span> Administração de contas a pagar
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a href="{{ route('pays.new') }}" class="btn btn-default">
+                                <span class="glyphicon glyphicon-plus"></span> Novo lançamento
+                            </a>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <table class="table table-bordered">
+                                <thead>
+                                <tr>
+                                    <th class="col-md-1 text-center">#</th>
+                                    <th class="col-md-2 text-center">DATA PREV.</th>
+                                    <th class="col-md-1 text-center">LANÇAMENTO</th>
+                                    <th class="col-md-3 text-center">DESCRIÇÃO</th>
+                                    <th class="col-md-1 text-center">VALOR</th>
+                                    <th class="col-md-2 text-center">CATEGORIA</th>
+                                    <th class="col-md-1 text-center">STATUS</th>
+                                    <th class="col-md-1 text-center">AÇÕES</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for pay in pays %}
+                                    <tr>
+                                        <td class="text-center">{{ pay.id }}</td>
+                                        <td>{{ pay.date_launch | date('d/m/Y') }}</td>
+                                        <td>{{ pay.created_at | date('d/m/Y') }}</td>
+                                        <td>{{ pay.name }}</td>
+                                        <td>{{ pay.value | number_format(2,',','.') }}</td>
+                                        <td>{{ pay.category.name }}</td>
+                                        <td>{{ pay.status == 1 ? 'Aberto' : 'Fechado' }}</td>
+                                        <td class="text-center">
+                                            <a href="{{ route('pays.edit',{'id': pay.id}) }}" class="btn btn-sm btn-default">
+                                                <span class="glyphicon glyphicon-pencil"></span>
+                                            </a>
+                                            <a href="{{ route('pays.show',{'id': pay.id}) }}"  class="btn btn-sm btn-default">
+                                                <span class="glyphicon glyphicon-search"></span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <span class="glyphicon glyphicon-th-large"></span> Detalhes do usuário: <small>#{{ user.first_name ~ ' ' ~ user.last_name }}</small>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <a href="{{ route('users.list') }}"
+                               class="btn btn-default">
+                                <span class="glyphicon glyphicon-backward"></span> Cancelar
+                            </a>
+
+                            <a href="{{ route('users.edit',{'id': user.id}) }}"
+                               class="btn btn-primary">
+                                <span class="glyphicon glyphicon-pencil"></span> Editar
+                            </a>
+                            <a href="{{ route('users.delete',{'id': user.id}) }}"
+                               class="btn btn-danger hidden">
+                                <span class="glyphicon glyphicon-remove"></span> Excluir
+                            </a>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <table class="table table-bordered">
+                                <tbody>
+                                <tr>
+                                    <th class="col-md-2 text-right">ID</th>
+                                    <td>{{ user.id }}</td>
+                                </tr>
+                                <tr>
+                                    <th class="col-md-2 text-right">Nome</th>
+                                    <td>{{ user.first_name ~ ' ' ~ user.last_name }}</td>
+                                </tr>
+                                <tr>
+                                    <th class="col-md-2 text-right">E-mail</th>
+                                    <td>{{ user.email }}</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,97 @@
+/*
+ *  Created by PhpStorm.
+ *  User: Junior Ferreira
+ *  Project: Sistema Financeiro HotMilhas
+ */
+*{outline: none;}
+body{
+    background-image: url(../images/degrade_fundo.png);
+    background-repeat: repeat-x;
+    background-color: #e2e2e2;
+}
+.navbar-hotmilhas{
+    border-top: 4px solid #cc0003;
+    background: #f1f1f1;
+    height: 40px;
+}
+.navbar-hotmilhas ul{
+    margin-top: 8px;
+}
+.navbar-hotmilhas ul li a, .navbar-default .navbar-nav > li > a{
+    color: #2d2322;
+    border-left: 1px dotted #838383;
+    font-weight: bold;
+    font-size: 12px;
+    height: 30px;
+    line-height: 0px;
+}
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+    color: red;
+    background-color: transparent;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+    color: red;
+    background-color: transparent;
+}
+.navbar-hotmilhas .dropdown-menu li > a{
+    height: 30px;
+    line-height: 30px;
+}
+
+/*form-login*/
+.form-login{
+    margin-top: 40px;
+}
+.panel{
+    border-radius: 0px;
+}
+.form-login .panel .panel-title{
+    text-align: center;
+    padding-top: 10px;
+}
+.form-login .panel .panel-title small{
+    width: 76%;
+    display: block;
+    margin: 5px 0px;
+    text-align: right;
+}
+.btn{
+    padding: 10px;
+    border-radius: 0px;
+}
+.btn-sm{
+    padding: 3px 5px;
+    border-radius: 0px;
+    font-size: 11px;
+}
+
+.btn-danger{
+    background: #cc0003;
+    padding: 10px;
+    color: #ffffff;
+    border-radius: 0px;
+}
+.btn-danger-login{
+    padding: 20px;
+}
+.form-control{
+    border-radius: 0px;
+    padding: 20px;
+}
+select{
+    padding: 5px!important;
+    height: 40px!important;
+}
+.list-group-item:first-child {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+.list-group-item:last-child {
+    margin-bottom: 0;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+.error{
+    color: #ff0000;
+    font-size: 12px;
+}
